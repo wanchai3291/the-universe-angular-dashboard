@@ -1,0 +1,12 @@
+version: '3'
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./src:/usr/src/app/src
+    environment:
+      - NODE_ENV=development
